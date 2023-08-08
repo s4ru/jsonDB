@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class HttpTest : MonoBehaviour
 {
     public int CardID = 3;
-    public string url = "https://my-json-server.typicode.com/s4ru/jsonDB";
+    public string url = "https://my-json-server.typicode.com/s4ru/jsonDDB";
     public string apiRickAndMorty = "https://rickandmortyapi.com/api/character";
 
     [SerializeField]
