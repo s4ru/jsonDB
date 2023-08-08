@@ -425,17 +425,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f218036c614352f4dab8e96e42dc116f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardID: 1
-  url: https://my-json-server.typicode.com/s4ru/jsonDB
+  UserId: 2
+  url: https://my-json-server.typicode.com/s4ru/jsonDDB
   apiRickAndMorty: https://rickandmortyapi.com/api/character
   UsernameCard: {fileID: 1767752410}
-  YourRawImage:
+  MyCard:
   - {fileID: 480947796}
   - {fileID: 1198322652}
   - {fileID: 217811754}
   - {fileID: 330754839}
   - {fileID: 1774908818}
-  MycardID:
+  MyCardFont:
   - {fileID: 1609729479}
   - {fileID: 328308856}
   - {fileID: 661368250}
