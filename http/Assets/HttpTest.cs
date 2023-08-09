@@ -21,6 +21,7 @@ public class HttpTest : MonoBehaviour
     private TMP_Text[] MyCardFont;
     [SerializeField]
     private TMP_Text[] CardNumber;
+    private List<Character> downloadedCharacters = new List<Character>();
     private User userrs;
 
     public void SendRequest()
@@ -54,6 +55,7 @@ public class HttpTest : MonoBehaviour
                     StartCoroutine(GetDeck(i));
                 }
 
+                DisplayDownloadedCharacters();
             }
             else
             {
@@ -79,13 +81,23 @@ public class HttpTest : MonoBehaviour
 
                     StartCoroutine(DownloadImage(character.image, MyCard[index]));
                     MyCardFont[index].text = character.name;
+
+                    downloadedCharacters.Add(character); // Add the downloaded character to the list
                 }
                 else
                 {
                     Debug.Log(request.error);
                 }
             }
+        }
 
+        void DisplayDownloadedCharacters()
+        {
+            foreach (Character character in downloadedCharacters)
+            {
+                // Here you can use the downloaded character information as needed
+                Debug.Log("Downloaded Character - ID: " + character.id + ", Name: " + character.name + ", Image URL: " + character.image);
+            }
         }
 
         IEnumerator DownloadImage(string MediaUrl, RawImage image)
